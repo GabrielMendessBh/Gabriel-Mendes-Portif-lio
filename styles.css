@@ -1,3 +1,35 @@
+:root {
+  --bg: #0B0C0E;
+  --bg-raised: #111214;
+  --line: #26282C;
+  --text: #EDEDEF;
+  --text-dim: #8A8D93;
+  --text-faint: #55585E;
+  --accent: #F2B84B;
+  --accent-dim: #7A611F;
+  --on-accent: #0B0C0E;
+}
+ 
+html[data-theme="light"] {
+  --bg: #FAF9F6;
+  --bg-raised: #FFFFFF;
+  --line: #E1DFDA;
+  --text: #17181A;
+  --text-dim: #55585E;
+  --text-faint: #8A8D93;
+  --accent: #B8860F;
+  --accent-dim: #E9CD86;
+  --on-accent: #FFFFFF;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
 body {
   margin: 0;
   background: var(--bg);
