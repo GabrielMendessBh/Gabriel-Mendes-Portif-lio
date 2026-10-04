@@ -1,35 +1,3 @@
-:root {
-  --bg: #0B0C0E;
-  --bg-raised: #111214;
-  --line: #26282C;
-  --text: #EDEDEF;
-  --text-dim: #8A8D93;
-  --text-faint: #55585E;
-  --accent: #F2B84B;
-  --accent-dim: #7A611F;
-  --on-accent: #0B0C0E;
-}
-
-html[data-theme="light"] {
-  --bg: #FAF9F6;
-  --bg-raised: #FFFFFF;
-  --line: #E1DFDA;
-  --text: #17181A;
-  --text-dim: #55585E;
-  --text-faint: #8A8D93;
-  --accent: #B8860F;
-  --accent-dim: #E9CD86;
-  --on-accent: #FFFFFF;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   background: var(--bg);
@@ -38,27 +6,27 @@ body {
   line-height: 1.5;
   transition: background 0.3s ease, color 0.3s ease;
 }
-
+ 
 .paca {
   font-family: "IBM Plex Mono", monospace;
 }
-
+ 
 ::selection {
   background: var(--accent);
   color: var(--on-accent);
 }
-
+ 
 a {
   color: inherit;
   text-decoration: none;
 }
-
+ 
 .gamba {
   max-width: 920px;
   margin: 0 auto;
   padding: 0 24px;
 }
-
+ 
 /* ---------------- NAV ---------------- */
 nav {
   position: sticky;
@@ -68,7 +36,7 @@ nav {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
-
+ 
 .perrengue {
   display: flex;
   align-items: center;
@@ -80,7 +48,7 @@ nav {
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
 }
-
+ 
 @media (max-width:640px) {
   .tucano {
     order: 3;
@@ -88,13 +56,13 @@ nav {
     padding-top: 4px;
   }
 }
-
+ 
 @media (max-width:420px) {
   .biscoito span {
     display: none;
   }
 }
-
+ 
 .tucano {
   display: flex;
   flex-wrap: wrap;
@@ -103,27 +71,30 @@ nav {
   align-items: center;
   color: var(--text-dim);
 }
-
+ 
 .tucano a:hover {
   color: var(--accent);
 }
-
+ 
 .preguica {
   color: var(--text-faint);
 }
-
+ 
 .tangerina {
   font-weight: 600;
   color: var(--text);
 }
-
+ 
 .zebra {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  row-gap: 8px;
+  gap: 8px;
   flex-shrink: 0;
 }
-
+ 
 .achado {
   display: flex;
   align-items: center;
@@ -135,21 +106,23 @@ nav {
   color: var(--text-dim);
   transition: border-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 .achado:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
-
+ 
 .achado svg {
   width: 16px;
   height: 16px;
 }
-
+ 
 .biscoito {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  min-width: 118px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   color: var(--on-accent);
@@ -159,23 +132,23 @@ nav {
   white-space: nowrap;
   transition: filter 0.2s ease;
 }
-
+ 
 .biscoito:hover {
   filter: brightness(1.08);
 }
-
+ 
 .biscoito svg {
   width: 14px;
   height: 14px;
 }
-
+ 
 .mandeibem {
   display: flex;
   border: 1px solid var(--line);
   border-radius: 6px;
   overflow: hidden;
 }
-
+ 
 .migue {
   font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
@@ -186,20 +159,20 @@ nav {
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
-
+ 
 .migue+.migue {
   border-left: 1px solid var(--line);
 }
-
+ 
 .migue:hover {
   color: var(--text);
 }
-
+ 
 .migue.manga {
   background: var(--accent);
   color: var(--on-accent);
 }
-
+ 
 .jacare {
   display: flex;
   align-items: center;
@@ -213,35 +186,35 @@ nav {
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 .jacare:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
-
+ 
 .jacare svg {
   width: 16px;
   height: 16px;
 }
-
+ 
 .jacare .sapo {
   display: none;
 }
-
+ 
 html[data-theme="light"] .jacare .mizeravi {
   display: none;
 }
-
+ 
 html[data-theme="light"] .jacare .sapo {
   display: block;
 }
-
+ 
 /* ---------------- HERO ---------------- */
 .abacate {
   padding: 64px 0 96px;
   border-bottom: 1px solid var(--line);
 }
-
+ 
 .papagaio {
   display: flex;
   justify-content: space-between;
@@ -250,11 +223,11 @@ html[data-theme="light"] .jacare .sapo {
   color: var(--text-dim);
   margin-bottom: 40px;
 }
-
+ 
 .papagaio .travei {
   color: var(--accent);
 }
-
+ 
 h1.canguru {
   font-size: clamp(48px, 10vw, 92px);
   line-height: 0.98;
@@ -262,12 +235,12 @@ h1.canguru {
   margin: 0;
   letter-spacing: -0.02em;
 }
-
+ 
 h1.canguru .treta {
   color: var(--text-faint);
   font-weight: 500;
 }
-
+ 
 .coco {
   margin-top: 28px;
   display: flex;
@@ -277,44 +250,44 @@ h1.canguru .treta {
   font-size: 13.5px;
   color: var(--text-dim);
 }
-
+ 
 .coco strong {
   color: var(--text);
   font-weight: 500;
 }
-
+ 
 .stonks {
   margin-top: 16px;
   font-size: 14px;
   color: var(--accent);
   min-height: 20px;
 }
-
+ 
 .choquei {
   display: inline-block;
   margin-left: 2px;
   animation: blink 0.9s step-end infinite;
 }
-
+ 
 @keyframes blink {
-
+ 
   0%,
   100% {
     opacity: 1;
   }
-
+ 
   50% {
     opacity: 0;
   }
 }
-
+ 
 .banana {
   margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-
+ 
 .acerola {
   font-family: "IBM Plex Mono", monospace;
   font-size: 11.5px;
@@ -323,7 +296,7 @@ h1.canguru .treta {
   border-radius: 20px;
   padding: 5px 12px;
 }
-
+ 
 .framboesa {
   margin-top: 56px;
   font-family: "IBM Plex Mono", monospace;
@@ -333,48 +306,48 @@ h1.canguru .treta {
   align-items: center;
   gap: 8px;
 }
-
+ 
 .framboesa .capivarao {
   display: inline-block;
   animation: bob 1.6s ease-in-out infinite;
 }
-
+ 
 @keyframes bob {
-
+ 
   0%,
   100% {
     transform: translateY(0);
   }
-
+ 
   50% {
     transform: translateY(5px);
   }
 }
-
+ 
 /* ---------------- SECTION ---------------- */
 section {
   padding: 72px 0;
   border-bottom: 1px solid var(--line);
 }
-
+ 
 section.kiwi {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
+ 
 section.kiwi.pastel {
   opacity: 1;
   transform: translateY(0);
 }
-
+ 
 .limao {
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   color: var(--accent);
   margin-bottom: 28px;
 }
-
+ 
 /* ---------------- ABOUT ---------------- */
 .sextou {
   display: grid;
@@ -382,7 +355,7 @@ section.kiwi.pastel {
   gap: 40px;
   align-items: start;
 }
-
+ 
 .graviola {
   width: 180px;
   height: 220px;
@@ -398,30 +371,31 @@ section.kiwi.pastel {
   padding: 12px;
   overflow: hidden;
 }
-
+ 
 .graviola img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   display: block;
   filter: grayscale(20%);
 }
-
+ 
 .maracuja p {
   margin: 0 0 16px;
   color: var(--text-dim);
   font-size: 15px;
 }
-
+ 
 .maracuja p:last-child {
   margin-bottom: 0;
 }
-
+ 
 .maracuja strong {
   color: var(--text);
   font-weight: 600;
 }
-
+ 
 .coisalinda {
   margin-top: 20px;
   border-left: 2px solid var(--accent);
@@ -430,28 +404,32 @@ section.kiwi.pastel {
   font-size: 13px;
   color: var(--text-dim);
 }
-
+ 
 .coisalinda b {
   color: var(--text);
 }
-
+ 
 @media (max-width:640px) {
   .sextou {
     grid-template-columns: 1fr;
   }
-
+ 
   .graviola {
     width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
-
+ 
 /* ---------------- FORMAÇÃO (timeline) ---------------- */
 .quati {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
-
+ 
 .jaca {
   display: grid;
   grid-template-columns: 100px 1fr;
@@ -459,55 +437,55 @@ section.kiwi.pastel {
   padding: 24px 0;
   border-top: 1px solid var(--line);
 }
-
+ 
 .jaca:first-child {
   border-top: none;
 }
-
+ 
 .tapioca {
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   color: var(--text-dim);
 }
-
+ 
 .tapioca .uva {
   display: block;
   margin-top: 4px;
   font-size: 10.5px;
   color: var(--accent);
 }
-
+ 
 .capiroto {
   font-size: 17px;
   font-weight: 600;
   margin: 0 0 4px;
 }
-
+ 
 .seriema {
   font-size: 13.5px;
   color: var(--text-dim);
   margin-bottom: 6px;
 }
-
+ 
 .ariranha {
   font-size: 13.5px;
   color: var(--text-faint);
 }
-
+ 
 @media (max-width:560px) {
   .jaca {
     grid-template-columns: 1fr;
     gap: 6px;
   }
 }
-
+ 
 /* ---------------- SKILLS ---------------- */
 .jabuti {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
 }
-
+ 
 .coruja {
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -518,23 +496,23 @@ section.kiwi.pastel {
   background: var(--bg-raised);
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
-
+ 
 .coruja:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
-
+ 
 .memezinho {
   margin-top: 24px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   color: var(--text-dim);
 }
-
+ 
 .memezinho b {
   color: var(--text);
 }
-
+ 
 /* ---------------- PRÊMIOS ---------------- */
 .picole {
   display: flex;
@@ -545,24 +523,24 @@ section.kiwi.pastel {
   padding: 28px;
   background: var(--bg-raised);
 }
-
+ 
 .panda {
   font-size: 32px;
   line-height: 1;
   flex-shrink: 0;
 }
-
+ 
 .aff {
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 6px;
 }
-
+ 
 .carambola {
   font-size: 13.5px;
   color: var(--text-dim);
 }
-
+ 
 /* ---------------- PROJETOS ---------------- */
 .aiaiai {
   border: 1px dashed var(--line);
@@ -573,14 +551,112 @@ section.kiwi.pastel {
   font-family: "IBM Plex Mono", monospace;
   font-size: 13.5px;
 }
-
+ 
 .aiaiai .figo {
   font-size: 15px;
   color: var(--text-dim);
   margin-bottom: 8px;
   display: block;
 }
-
+ 
+.tamarindo {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-raised);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+ 
+.tamarindo:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+ 
+.girafa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(242, 184, 75, 0.25), transparent 55%),
+    linear-gradient(135deg, #1a1b1e 0%, #0b0c0e 100%);
+}
+ 
+html[data-theme="light"] .girafa {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(184, 134, 15, 0.18), transparent 55%),
+    linear-gradient(135deg, #f1efe9 0%, #e4e1d8 100%);
+}
+ 
+.girafa svg {
+  width: 56px;
+  height: 56px;
+  color: var(--accent);
+}
+ 
+.lhama {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.sagui {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text);
+}
+ 
+.boto {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+ 
+.saci {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+ 
+.quintal {
+  align-self: flex-start;
+  margin-top: 6px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  border-radius: 6px;
+  padding: 7px 14px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+ 
+.quintal:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+ 
+.mimosa {
+  margin-top: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--text-faint);
+  text-align: center;
+}
+ 
+@media (max-width:640px) {
+  .tamarindo {
+    grid-template-columns: 1fr;
+  }
+ 
+  .girafa {
+    height: 120px;
+  }
+}
+ 
 /* ---------------- CONTATO ---------------- */
 .surtei {
   overflow: hidden;
@@ -593,49 +669,49 @@ section.kiwi.pastel {
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
 }
-
+ 
 .surtei span {
   display: inline-block;
   padding-right: 24px;
   animation: scroll 22s linear infinite;
 }
-
+ 
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
-
+ 
   to {
     transform: translateX(-50%);
   }
 }
-
+ 
 .onca {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
-
+ 
 .oxente {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 22px;
   background: var(--bg-raised);
 }
-
+ 
 .oxente .cafezinho {
   font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   color: var(--text-faint);
   margin-bottom: 6px;
 }
-
+ 
 .oxente .cereja {
   font-size: 16px;
   font-weight: 500;
   word-break: break-word;
 }
-
+ 
 .vapo {
   margin-top: 10px;
   font-family: "IBM Plex Mono", monospace;
@@ -647,17 +723,17 @@ section.kiwi.pastel {
   padding: 5px 10px;
   cursor: pointer;
 }
-
+ 
 .vapo:hover {
   background: rgba(242, 184, 75, 0.08);
 }
-
+ 
 @media (max-width:560px) {
   .onca {
     grid-template-columns: 1fr;
   }
 }
-
+ 
 /* ---------------- CONTACT FORM ---------------- */
 .capivara {
   margin-top: 32px;
@@ -665,38 +741,38 @@ section.kiwi.pastel {
   flex-direction: column;
   gap: 18px;
 }
-
+ 
 .brabo {
   display: flex;
   flex-direction: column;
   gap: 6px;
   position: relative;
 }
-
+ 
 .viajei {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
-
+ 
 .viajei>div {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
+ 
 @media (max-width:560px) {
   .viajei {
     grid-template-columns: 1fr;
   }
 }
-
+ 
 .capivara label {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   color: var(--text-dim);
 }
-
+ 
 .capivara input,
 .capivara textarea {
   font-family: "Space Grotesk", sans-serif;
@@ -710,24 +786,24 @@ section.kiwi.pastel {
   transition: border-color 0.2s ease;
   resize: vertical;
 }
-
+ 
 .capivara input:focus,
 .capivara textarea:focus {
   border-color: var(--accent);
 }
-
+ 
 .capivara input.pera,
 .capivara textarea.pera {
   border-color: #D64545;
 }
-
+ 
 .dahora {
   font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   color: #D64545;
   min-height: 14px;
 }
-
+ 
 .caos {
   align-self: flex-end;
   font-family: "IBM Plex Mono", monospace;
@@ -735,7 +811,7 @@ section.kiwi.pastel {
   color: var(--text-faint);
   margin-top: -14px;
 }
-
+ 
 .gato {
   align-self: flex-start;
   font-family: "IBM Plex Mono", monospace;
@@ -748,55 +824,55 @@ section.kiwi.pastel {
   cursor: pointer;
   transition: filter 0.2s ease;
 }
-
+ 
 .gato:hover {
   filter: brightness(1.08);
 }
-
+ 
 footer {
   padding: 32px 0 48px;
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;
   color: var(--text-faint);
 }
-
+ 
 .arara {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
 }
-
+ 
 .pinguim {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-
+ 
 .urutau {
   color: var(--text-dim);
 }
-
+ 
 .cachorro {
   align-items: flex-end;
   text-align: right;
 }
-
+ 
 .cachorro a {
   transition: color 0.2s ease;
 }
-
+ 
 .cachorro a:hover {
   color: var(--accent);
 }
-
+ 
 @media (max-width:560px) {
   .cachorro {
     align-items: flex-start;
     text-align: left;
   }
 }
-
+ 
 /* ---------------- MODAL ---------------- */
 .bolinho {
   position: fixed;
@@ -811,12 +887,12 @@ footer {
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
-
+ 
 .bolinho.tamandua {
   opacity: 1;
   pointer-events: auto;
 }
-
+ 
 .laranja {
   position: relative;
   background: var(--bg-raised);
@@ -829,11 +905,11 @@ footer {
   transform: translateY(12px) scale(0.97);
   transition: transform 0.25s ease;
 }
-
+ 
 .bolinho.tamandua .laranja {
   transform: translateY(0) scale(1);
 }
-
+ 
 .misto {
   width: 46px;
   height: 46px;
@@ -845,18 +921,18 @@ footer {
   font-size: 20px;
   font-weight: 700;
 }
-
+ 
 .laranja h3 {
   margin: 0 0 8px;
   font-size: 18px;
 }
-
+ 
 .laranja p {
   margin: 0 0 20px;
   font-size: 13.5px;
   color: var(--text-dim);
 }
-
+ 
 .mico {
   position: absolute;
   top: 12px;
@@ -869,11 +945,11 @@ footer {
   cursor: pointer;
   font-size: 14px;
 }
-
+ 
 .mico:hover {
   color: var(--text);
 }
-
+ 
 .trovao {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12.5px;
@@ -884,7 +960,7 @@ footer {
   padding: 9px 22px;
   cursor: pointer;
 }
-
+ 
 .trovao:hover {
   filter: brightness(1.08);
 }
